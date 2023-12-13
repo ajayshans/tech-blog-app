@@ -8,6 +8,7 @@ class User extends Model {
   }
 }
 
+// Defining schema for user table
 User.init(
   {
     id: {
