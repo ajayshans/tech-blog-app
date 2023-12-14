@@ -1,0 +1,23 @@
+<div class="container-fluid" data-post-id="{{this.id}}">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <!--Update existing post-->
+            <form>
+                <h2>Update post</h2>
+                <p>Amend your post and click the 'Save' button once complete.</p>
+                <br>
+                <div class="form-group">
+                    <label for="update-post-title">Title</label>
+                    <input type="text" class="form-control" id="update-post-title" value="{{title}}">
+                </div>
+                <div class="form-group">
+                    <label for="update-post-content">Content</label>
+                    <textarea rows="3" class="form-control" id="update-post-content">{{content}}</textarea>
+                </div>
+                <button id="update-post-button" type="submit" class="btn btn-primary my-3 px-4" data-post-id="{{id}}">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/updatePost.js"></script>
