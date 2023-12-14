@@ -1,0 +1,22 @@
+<!-- Loop through each object in the posts array -->
+{{#each posts as |post| }}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card rounded-0 col-10 my-4 px-0">
+            <div class="card-body homepage p-5">
+                <blockquote class="blockquote mb-0">
+                    <br>
+                    <a href="/post/{{id}}" class="un"><h2>{{title}}</h2></a>
+                    <br>
+                    <div class="row">
+                        <p class="col-10 text-truncate">{{content}}</p>
+                        <a class="col-12 col-lg-2 read-more" href="/post/{{id}}"><p class="un more">View Comments ➡️</p></a>
+                    </div>
+                    <footer class="blockquote-footer">By <cite title="Source Title">{{user.username}} on {{format_date date_created}} </cite></footer>
+                    <br>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

@@ -94,6 +94,12 @@ header {
     color: blue;
 }
 
+.more {
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
 /* Custom button styling */
 .btn-primary {
     font-family: var(--font-heading);
@@ -130,6 +136,7 @@ header {
 .un:hover {
     background-position: 100% 100%; 
     background-size: 100% 2px;
+    color: grey;
 }
 
 /* Viewport responses */
