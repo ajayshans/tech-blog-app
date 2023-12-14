@@ -135,7 +135,7 @@ router.get('/updatecomment/:id', withAuth, async (req, res) => {
 
         const comment = commentData.get({ plain: true });
 
-        res.render('updatePost', {
+        res.render('updateComment', {
             ...comment,
             logged_in: req.session.logged_in,
         });
