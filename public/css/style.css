@@ -89,6 +89,11 @@ header {
     background-color: rgba(128, 128, 128, 0.105);
 }
 
+.click {
+    font-weight: bold;
+    color: blue;
+}
+
 /* Custom button styling */
 .btn-primary {
     font-family: var(--font-heading);
