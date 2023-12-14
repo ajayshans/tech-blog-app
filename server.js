@@ -2,7 +2,6 @@
 const path = require('path');
 // Import and use Express.js for use with Node JS
 const express = require('express');
-const app = express();
 // Import session to store client data as a cookie
 const session = require('express-session');
 // Import handlebars.js for dynamically creating HTML based on live data in database
@@ -16,6 +15,7 @@ const sequelize = require('./config/connection');
 // Import connect-session-sequelize for storing sessions
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const app = express();
 // Create port
 const PORT = process.env.PORT || 5001;
 
