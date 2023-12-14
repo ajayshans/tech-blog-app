@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!--Import Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <!--Import Google Fonts-->
+        <link rel="stylesheet" href="ttps://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap"/>
+        <!--Import External Style Sheets (custom)-->
+        <link rel="stylesheet" href="/css/reset.css"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <title>TTB App</title>
+    </head>
+
+    <body>
+        <!--Header-->
+        <header class="mb-4">
+            <!--Nav-->
+            <nav class="navbar">
+                <a href="/" class="navbar-brand"><h1>The Tech Blog</h1></a>
+                <span class="navbar-text form-inline">
+                    <a href="/" class="px-5 un">Home</a>
+                    <!-- Render login page if user not logged in and dashboard page if user logged in -->
+                    {{#if logged_in}}
+                        <a href="/dashboard" class="px-5 un">Dashboard</a>
+                        <a href="" class="px-5 un" id="logout-button">Log out</a>
+                    {{else}}
+                        <a href="/login" class="px-5 un">Log in</a>
+                    {{/if}}
+                </span>
+            </nav>
+        </header>
+        <main>
+            <!-- Render the sub handlebars template (non-main) -->
+            {{{ body }}}
+        </main>
+
+        <!--Import Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- Only make logout functionality available for users who have logged in -->
+        {{#if logged_in}}
+            <script src="/js/logout.js"></script>
+        {{/if}}
+    </body>
+
+</html>
