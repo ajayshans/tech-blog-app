@@ -31,7 +31,6 @@
                                     <p>{{comment.comment}}</p>
                                     <footer class="blockquote-footer"><cite>{{comment.user.username}}</cite>, {{format_date comment.date_created}}</footer>
                                 </blockquote>
-                                <!--If user wrote the comment, allow them to update or delete it CURRENTLY DISABLED / WORK IN PROGRESS -->
                                 <div>
                                     <a href="/updatecomment/{{id}}"><button class="update-comment-button btn btn-primary px-4" data-comment-id="{{comment.id}}">Update</button></a>
                                     <button class="delete-comment-button btn btn-primary px-4" data-comment-id="{{comment.id}}">Delete</button>
